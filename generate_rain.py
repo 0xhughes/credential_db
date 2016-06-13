@@ -10,7 +10,7 @@ def menu():
 		if os.path.exists(in_path):
 			sane = 0
 		else:
-			os.system('cls')
+			os.system('cls' if os.name == 'nt' else 'clear')
 			print "[ - ] Invalid path, try again."
 	return(in_path)
 
@@ -42,7 +42,7 @@ for row in x:
 						cur2.execute("UPDATE main SET rainTableSHA1 = '"+str(m2.hexdigest())+"' WHERE pri_Index = '"+str(ind)+"'")
 						cnt+=1
 						if cnt % 100 == 0:
-							os.system('cls')
+							os.system('cls' if os.name == 'nt' else 'clear')
 							print "[ + ] "+str(cnt)+" rain SHA1/MD5s calculated and entered."
 	except UnicodeEncodeError:
 		pass
