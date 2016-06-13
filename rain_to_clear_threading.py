@@ -16,7 +16,7 @@ def menu():
 		if os.path.exists(in_path):
 			sane = 0
 		else:
-			os.system('cls')
+			os.system('cls' if os.name == 'nt' else 'clear')
 			print "[ - ] Invalid path, try again."
 	return(in_path)
 
@@ -54,7 +54,7 @@ for row in x:
 					in_list.append(str(ind)+":--:"+str(pas)+":--:"+str(md5))
 					cnt2+=1
 					if cnt2 % 1000 == 0:
-						os.system('cls')
+						os.system('cls' if os.name == 'nt' else 'clear')
 						print "[ + ] "+str(cnt2)+" rainbow table md5s with clear text passes read in..."
 	except UnicodeEncodeError:
 		pass
@@ -90,7 +90,7 @@ for item in in_list:
 				query_t.start()
 				cnt+=1
 				if cnt % 10 == 0:
-					os.system('cls')
+					os.system('cls' if os.name == 'nt' else 'clear')
 					print "[ + ] "+str(cnt2)+" md5s with cleartext passes read in..."
 					print "[ + ] "+str(cnt)+" clear text passes found and added to records."
 					print "[ + ] "+str(len(d_list))+" md5s added to list."
