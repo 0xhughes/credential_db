@@ -8,7 +8,7 @@ def menu():
 		print "[ - ] Please enter absolute path to cred. database to be created: "
 		in_path = raw_input()
 		if os.path.exists(in_path):
-			os.system('cls')
+			os.system('cls' if os.name == 'nt' else 'clear')
 			print "[ - ] Invalid path, try again."
 		else:
 			sane = 0
