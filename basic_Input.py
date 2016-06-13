@@ -10,7 +10,7 @@ def menu():
 		if os.path.exists(in_path):
 			sane = 0
 		else:
-			os.system('cls')
+			os.system('cls' if os.name == 'nt' else 'clear')
 			print "[ - ] Invalid path, try again."
 	return(in_path)
 
@@ -23,7 +23,7 @@ while sane == 0:
 	if sel in sel_opts:
 		sane = 1
 	else:
-		os.system('cls')
+		os.system('cls' if os.name == 'nt' else 'clear')
 		print "[ - ] Please enter 1, 2, 3, or 4, for your selection."
 
 if sel == "1":
