@@ -11,7 +11,7 @@ def menu():
 			pass
 			sane = 0
 		else:
-			os.system('cls')
+			os.system('cls' if os.name == 'nt' else 'clear')
 			print "[ - ] Invalid path, try again."
 	return(in_path)
 
