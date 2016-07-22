@@ -22,5 +22,8 @@ Same as above, but I am attempting to efficiently thread it to increase speed. W
 #### MD5colSHA1stoSHA1col.py
 One time I brought in a big pile of SHA1 hashes in as MD5s, so I made this script to check the MD5 column and move SHA1s (40 characters) from the MD5 column into the SHA1 column.
 
+#### general_dump_detector.py
+I run a number of scrapers to detect information of interest relevant to this project. One thing I found tedious was finding readily formatted files natively ready for ingestion into the database via basic_input.py. So I wrote this quick script. I point it at my directory in which my scrapes appear, and if they for the most part match a certain structure on all lines of text within (string delimiter string), it will then move from your input directory to your output directory. You may then ingest those files using basic_input.py into your database.
+
 ## More General
 This project has been slow and on-going for me. The scripts will vary in styling/format, and your results may vary. They were written using Python 2.7.11 within Windows 7. Some of the scripts utilize potential third party modules, so check the imports to prevent errors at run-time. Please reach out to me with any thoughts, comments, concerns, etc.
