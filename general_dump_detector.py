@@ -25,7 +25,7 @@ def menu():
 def main(paths):
 	path = paths[0]
 	out_path = paths[1]
-	delims = ":;+=-"
+	delims = ":;+=-|"
 	for delim in delims:
 		for item in os.listdir(path):
 			file = open(path+item, 'r').readlines()
